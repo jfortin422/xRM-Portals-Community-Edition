@@ -13,7 +13,8 @@ namespace Adxstudio.Xrm.Services
 	using Adxstudio.Xrm.Core.Flighting;
 	using Adxstudio.Xrm.Web;
 	using Microsoft.Crm.Sdk.Messages;
-	using Microsoft.IdentityModel.Clients.ActiveDirectory;
+    //using Microsoft.IdentityModel.Clients.ActiveDirectory;
+    using Microsoft.Identity.Client;
 	using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 	using Microsoft.Practices.EnterpriseLibrary.WindowsAzure.TransientFaultHandling;
 	using Microsoft.Practices.TransientFaultHandling;

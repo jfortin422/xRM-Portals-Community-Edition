@@ -13,7 +13,8 @@ namespace Adxstudio.Xrm.Services
 	using Adxstudio.Xrm.Configuration;
 	using Adxstudio.Xrm.IdentityModel.ActiveDirectory;
 	using Adxstudio.Xrm.Performance;
-	using Microsoft.IdentityModel.Clients.ActiveDirectory;
+	//using Microsoft.IdentityModel.Clients.ActiveDirectory;
+    using Microsoft.Identity.Client;
 
 	/// <summary>
 	///  CrmTokenManager class
@@ -157,7 +158,7 @@ namespace Adxstudio.Xrm.Services
 			// record the error of the failed certificate
 			ADXTrace.Instance.TraceWarning(TraceCategory.Application, string.Format("Get token failed: index: {0}: {1}", index, e));
 
-			var ase = e as AdalServiceException;
+			var ase = e as MsalClientException;
 
 			if (ase != null)
 			{
